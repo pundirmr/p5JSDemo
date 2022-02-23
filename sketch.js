@@ -6,6 +6,12 @@ let eydist;
 let blinkbool;
 var cnv;
 
+var backgroundImage;
+function preload() {
+    backgroundImage = loadImage("GameBG.jpg");
+  }
+  
+
 function setup() {
 	let browser = false;
 
@@ -36,7 +42,7 @@ function setup() {
 }
 
 function draw() {
-	background(bgc);
+	background(backgroundImage);
 	rightEye = new Eye(width/2 + eydist, height/2, radi);
 	leftEye = new Eye(width/2 - eydist, height/2, radi);
 	push();
